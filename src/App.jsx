@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
-  const [data, setData] = useState({});
+  const [data, setData] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -13,7 +13,7 @@ function App() {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const data = await response.json();
-        setData(data);
+        setData(data.data);
       } catch (error) {
         console.log("Error fetching data: ", error);
       }
@@ -22,9 +22,17 @@ function App() {
     fetchData();
   }, []);
 
+  console.log(data);
+
   return (
-    <div>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+    <div className="container">
+      {data.map((object) => {
+        return (
+          <div key={object.id} className="card">
+            <img src={object.images.downsized_large.url} alt="" />
+          </div>
+        );
+      })}
     </div>
   );
 }
