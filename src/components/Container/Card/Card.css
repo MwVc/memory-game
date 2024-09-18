@@ -1,0 +1,19 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  height: 300px;
+  width: 225px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.card:active {
+  transform: scale(0.95);
+}
