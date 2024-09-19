@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Container from "./components/Container/container";
+import { fetchNumbers } from "./utilities";
 
 function App() {
   const [data, setData] = useState([]);
@@ -20,6 +21,7 @@ function App() {
     //   }
     // };
     // fetchData();
+
     const fetchData = async function () {
       try {
         const response = await fetchNumbers();
@@ -33,23 +35,9 @@ function App() {
     fetchData();
   }, []);
 
-  return <Container data={data} />;
+  console.log(data);
+
+  return <Container data={data} setData={setData} />;
 }
 
 export default App;
-
-function fetchNumbers() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const shouldFail = Math.random() > 0.8;
-      if (shouldFail) {
-        reject("Failed to fetch numbers. Server error!");
-      } else {
-        const data = Array.from({ length: 12 }, () =>
-          Math.floor(Math.random() * 100)
-        );
-        resolve({ json: () => Promise.resolve(data) });
-      }
-    }, 500);
-  });
-}
