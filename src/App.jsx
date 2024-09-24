@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import Container from "./components/Container/container";
+import Container from "./components/Container/Container";
 import { fetchNumbers } from "./utilities";
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
       try {
         const response = await fetchNumbers();
         const data = await response.json();
-        setData(data);
+        setData(data.map((object) => ({ ...object, isClicked: false })));
       } catch (error) {
         console.log("There was an error fetching data:", error);
       }
@@ -34,8 +34,6 @@ function App() {
 
     fetchData();
   }, []);
-
-  console.log(data);
 
   return <Container data={data} setData={setData} />;
 }
