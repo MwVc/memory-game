@@ -27,16 +27,6 @@ function App() {
       }
     };
 
-    // const fetchData = async function () {
-    //   try {
-    //     const response = await fetchNumbers();
-    //     const data = await response.json();
-    //     setData(data.map((object) => ({ ...object, isClicked: false })));
-    //   } catch (error) {
-    //     console.log("There was an error fetching data:", error);
-    //   }
-    // };
-
     fetchData();
   }, []);
 
