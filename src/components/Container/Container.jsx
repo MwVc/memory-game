@@ -10,7 +10,7 @@ export default function Container({
   highScore,
   setHighScore,
 }) {
-  console.log(score);
+  console.log(data);
 
   function handleClick(value) {
     if (!value.isClicked) {
@@ -28,8 +28,12 @@ export default function Container({
     }
   }
 
-  const cardList = data.map((value, index) => (
-    <Card value={value} key={index} handleClick={() => handleClick(value)} />
+  const cardList = data.map((gifData) => (
+    <Card
+      gifData={gifData}
+      key={gifData.id}
+      handleClick={() => handleClick(gifData)}
+    />
   ));
 
   return <div className="container">{cardList}</div>;
