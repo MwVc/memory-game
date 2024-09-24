@@ -31,9 +31,12 @@ function App() {
   }, []);
 
   return (
-    <>
-      <h2>Score: {score}</h2>
-      <h2>High Score: {highScore}</h2>
+    <div className="app">
+      <nav className="nav">
+        <h1>Memory Card Game</h1>
+        <h3>High Score: {highScore}</h3>
+        <h3>Score: {score}</h3>
+      </nav>
       <Container
         data={data}
         setData={setData}
@@ -42,7 +45,7 @@ function App() {
         highScore={highScore}
         setHighScore={setHighScore}
       />
-    </>
+    </div>
   );
 }
 
