@@ -7,6 +7,7 @@ export default function Container({
   setData,
   score,
   setScore,
+  highScore,
   setHighScore,
 }) {
   console.log(score);
@@ -23,6 +24,7 @@ export default function Container({
       const updatedData = data.map((item) => ({ ...item, isClicked: false }));
       setData(updatedData);
       setScore(0);
+      score > highScore && setHighScore(score);
     }
   }
 
@@ -38,4 +40,6 @@ Container.propTypes = {
   setData: PropTypes.func.isRequired,
   score: PropTypes.number.isRequired,
   setScore: PropTypes.func.isRequired,
+  highScore: PropTypes.number.isRequired,
+  setHighScore: PropTypes.func.isRequired,
 };
