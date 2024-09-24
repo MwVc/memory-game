@@ -47,6 +47,7 @@ function App() {
         setData={setData}
         score={score}
         setScore={setScore}
+        highScore={highScore}
         setHighScore={setHighScore}
       />
     </>
