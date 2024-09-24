@@ -5,6 +5,9 @@ import { fetchNumbers } from "./utilities";
 
 function App() {
   const [data, setData] = useState([]);
+  const [score, setScore] = useState(0);
+  const [highScore, setHighScore] = useState(0);
+
   useEffect(() => {
     // const fetchData = async () => {
     //   try {
@@ -35,7 +38,19 @@ function App() {
     fetchData();
   }, []);
 
-  return <Container data={data} setData={setData} />;
+  return (
+    <>
+      <h2>Score: {score}</h2>
+      <h2>High Score: {highScore}</h2>
+      <Container
+        data={data}
+        setData={setData}
+        score={score}
+        setScore={setScore}
+        setHighScore={setHighScore}
+      />
+    </>
+  );
 }
 
 export default App;
