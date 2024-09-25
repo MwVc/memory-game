@@ -46,6 +46,15 @@ function App() {
           highScore={highScore}
           setHighScore={setHighScore}
         />
+        <div className="overview">
+          <h3>Overview</h3>
+          <p>
+            The goal of the game is to click on a card without selecting the
+            same card twice. Each time a card is clicked, the deck is shuffled.
+            If a card is clicked twice, the game resets the score. The game also
+            keeps track of the highest score achieved in the current session.
+          </p>
+        </div>
       </div>
     </div>
   );
