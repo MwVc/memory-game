@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+#root {
+  height: 100%;
+}
+.game {
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+  height: 100;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #2c3e50;
+  box-shadow: 0 4px 12px #0003;
+}
+.nav h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+.nav h3 {
+  font-size: 2rem;
+  color: #ecf0f1;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto;
+  width: 80%;
+}
+.overview {
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  width: 50%;
+}
+.overview h3 {
+  font-size: 2rem;
+}
+.overview p {
+  font-size: 1.5rem;
+}
+.card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  height: 300px;
+  width: 225px;
+  box-shadow: 0 4px 6px #0000001a;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+  transition: box-shadow 0.3s ease;
+}
+.card img {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+.card:active {
+  transform: scale(0.95);
+}
+.card:hover {
+  box-shadow: 0 10px 10px #0006;
+}
