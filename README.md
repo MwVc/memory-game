@@ -31,12 +31,6 @@ The goal of the game is to click on a card without selecting the same card twice
 - **Effect Hook**: The `useEffect` hook is used to fetch data from the GIPHY API when the component first renders, ensuring that the game has card data to display.
 - **Shuffle Algorithm**: After each valid click, the array of cards is shuffled using a utility function to ensure that the cards are always rearranged.
 
-## Future Enhancements
-
-- Add more complex levels of difficulty.
-- Display additional feedback for incorrect selections.
-- Improve styling for better UX and design.
-
 ## Credits
 
 - [GIPHY API](https://developers.giphy.com/) for providing GIFs.
