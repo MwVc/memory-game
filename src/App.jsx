@@ -37,14 +37,16 @@ function App() {
         <h3>High Score: {highScore}</h3>
         <h3>Score: {score}</h3>
       </nav>
-      <Container
-        data={data}
-        setData={setData}
-        score={score}
-        setScore={setScore}
-        highScore={highScore}
-        setHighScore={setHighScore}
-      />
+      <div className="game">
+        <Container
+          data={data}
+          setData={setData}
+          score={score}
+          setScore={setScore}
+          highScore={highScore}
+          setHighScore={setHighScore}
+        />
+      </div>
     </div>
   );
 }
