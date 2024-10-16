@@ -36,7 +36,11 @@ export default function Container({
     />
   ));
 
-  return <div className="container">{cardList}</div>;
+  return (
+    <div className="cards-container container-xxl d-flex flex-wrap gap-4">
+      {cardList}
+    </div>
+  );
 }
 
 Container.propTypes = {
